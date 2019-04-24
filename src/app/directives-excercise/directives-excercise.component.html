@@ -1,0 +1,21 @@
+<div class="row">
+
+  <div class="col-xs-12">
+    <button class="btn {{ btn.colorClass }}" (click)="logClick(); btnChange();">{{ btn.title }}</button>
+    <p *ngIf="show">the internet is a serious businss</p>
+  </div>
+
+  <div class="col-xs-12">
+    <p>Logs</p>
+    <ul>
+      <li *ngFor="let x of logs; let i = index;" >
+        <span  *ngIf="i >= 5; else default" [ngClass]="{ white: i >= 5 }" [ngStyle]="{ backgroundColor: 'blue' }" > {{ x }} </span>
+        <ng-template #default>
+          {{ x }}
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
