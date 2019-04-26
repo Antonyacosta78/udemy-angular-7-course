@@ -21,7 +21,7 @@ export class DirectivesExcerciseComponent implements OnInit {
         let txt = (this.show) ? 'Hide at ' : 'Show at ';
         this.logs.push( txt + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds() );
     }
-    
+
     btnChange() {
         if (this.show) {
             this.show = false;

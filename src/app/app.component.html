@@ -1,28 +1,38 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
-            <h3>Im in the AppComponent!</h3>
-            <hr>
-            <!-- <app-servers></app-servers> -->
-            <!-- <div app-servers=""></div> -->
-            <app-servers></app-servers>
+        <div class="col-12 text-primary">
+            <h2>Add new Servers or Blueprints!</h2>
+            <label for="">Server Name</label>
+            <input type="text" class="form-control" [(ngModel)]="newServerName">
+            <label for="">Server Content</label>
+            <input type="text" class="form-control" [(ngModel)]="newServerContent">
+        </div>
+        <br>
+        <button class="btn btn-primary" [disabled]="newServerName === '' || newServerContent === ''"
+            (click)="onAddServer()">Add Server</button> &nbsp;
+        <button class="btn btn-primary" [disabled]="newServerName === '' || newServerContent === ''"
+            (click)="onAddServerBlueprint()">Add Server Blueprint</button>
+    </div>
+    <!-- ./row -->
 
-
-            <!-- <input type="text" [(ngModel)]="name" class="form-control">
-            <br>
-            <div class="row">
-                <div class="col-xs-12">
-                        <app-warning-alert [inputtext]="name"></app-warning-alert>
+    <div class="row">
+        <div class="col-xs-4 col-sm-3" *ngFor="let e of serverElements">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="">{{ e.name }}</p>
                 </div>
-                <div class="col-xs-12">
-                        <app-success-alert [inputtext]="name"></app-success-alert>
+                <div class="panel-body">
+                    <p [ngClass]="{'text-primary': e.type === 'blueprint', 'text-danger': e.type === 'server'}">
+                        <strong *ngIf="e.type === 'server'">{{ e.content }}</strong>
+                        <em *ngIf="e.type === 'blueprint'">{{ e.content }}</em>
+                    </p>
                 </div>
             </div>
-         -->
 
         </div>
-        </div>
     </div>
+
+    <!-- Excercises -->
     <div class="container">
         <h1>Exercises</h1>
         <div class="row">

@@ -1,22 +1,32 @@
 import { Component } from '@angular/core';
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-  // styles: [`
-  //   h3{
-  //     color: #ff0000;
-  //     background-color:green;
-  //   }
-  //   `]
-
 })
 export class AppComponent {
-  name = "John Doe"
+    serverElements = [];
+    newServerName = '';
+    newServerContent = '';
 
-  test(args){
-    console.log(args)
-  }
+    constructor() {
+    }
 
+    onAddServer() {
+        this.serverElements.push({
+            name: this.newServerName,
+            content: this.newServerContent,
+            type: 'server'
+        });
+    }
+
+    onAddServerBlueprint() {
+        this.serverElements.push({
+            name: this.newServerName,
+            content: this.newServerContent,
+            type: 'blueprint'
+        });
+    }
 }
