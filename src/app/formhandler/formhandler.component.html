@@ -8,9 +8,9 @@
         <input type="text" class="form-control" #serverContentInput>
     </div>
     <br>
-    <button class="btn btn-primary" [disabled]="serverNameInput.value === '' || serverContentInput.value === ''"
+    <button class="btn btn-primary"
         (click)="onAddServer({name: serverNameInput.value, content: serverContentInput.value})">Add Server</button> &nbsp;
-    <button class="btn btn-primary" [disabled]="serverNameInput.value === '' || serverContentInput.value === ''"
+    <button class="btn btn-primary"
         (click)="onAddServerBlueprint({name: serverNameInput.value, content: serverContentInput.value})">Add Server Blueprint</button>
 </div>
 <!-- ./row -->
