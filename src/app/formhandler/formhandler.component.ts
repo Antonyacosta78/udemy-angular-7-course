@@ -8,8 +8,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class FormhandlerComponent implements OnInit {
 
     @Output() serverExport = new EventEmitter();
-    newServerName = '';
-    newServerContent = '';
 
     constructor() { }
 
@@ -17,18 +15,19 @@ export class FormhandlerComponent implements OnInit {
     }
 
 
-    onAddServer() {
+    onAddServer({name, content}) {
+        console.log(name);
         this.serverExport.emit({
-            name: this.newServerName,
-            content: this.newServerContent,
+            name,
+            content,
             type: 'server'
         });
     }
 
-    onAddServerBlueprint() {
+    onAddServerBlueprint({name, content}) {
         this.serverExport.emit({
-            name: this.newServerName,
-            content: this.newServerContent,
+            name,
+            content,
             type: 'blueprint'
         });
     }
