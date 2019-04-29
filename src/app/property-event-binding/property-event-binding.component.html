@@ -1,0 +1,12 @@
+<app-gamecontrol (onGameTick)="addNumber($event)"></app-gamecontrol>
+<div class="row">
+    <div class="col-xs-12 col-sm-6" *ngFor="let number of numbers">
+        <app-odd *ngIf="number%2 !== 0; else evenTemplate"> {{ number }} </app-odd>
+        <ng-template #evenTemplate>
+            <app-even>
+                <p>{{ number }}</p>
+            </app-even>
+        </ng-template>
+
+    </div>
+</div>

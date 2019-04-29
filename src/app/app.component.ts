@@ -22,8 +22,4 @@ export class AppComponent {
         this.serverElements.push(data);
     }
 
-    onDestroyFirst() {
-        this.serverElements.splice(0, 1);
-    }
-
 }
