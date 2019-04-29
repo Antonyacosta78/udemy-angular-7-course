@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DatabindingExerciseComponent } from './databinding-exercise/databinding-exercise.component';
 import { DirectivesExcerciseComponent } from './directives-excercise/directives-excercise.component';
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { FormhandlerComponent } from './formhandler/formhandler.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 import { PropertyEventBindingComponent } from './property-event-binding/property-event-binding.component';
@@ -19,6 +20,7 @@ import { EvenComponent } from './property-event-binding/even/even.component';
 @NgModule({
   declarations: [
     AppComponent,
+    BasicHighlightDirective,
     DatabindingExerciseComponent,
     DirectivesExcerciseComponent,
     FormhandlerComponent,

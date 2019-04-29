@@ -15,7 +15,7 @@ export class PropertyEventBindingComponent implements OnInit {
     }
 
     addNumber(num) {
-        console.log(num)
+        console.log(num);
         this.numbers.push(num);
     }
 
