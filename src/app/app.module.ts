@@ -13,6 +13,7 @@ import { PropertyEventBindingComponent } from './property-event-binding/property
 import { GamecontrolComponent } from './property-event-binding/gamecontrol/gamecontrol.component';
 import { OddComponent } from './property-event-binding/odd/odd.component';
 import { EvenComponent } from './property-event-binding/even/even.component';
+import { BetterHighlightDirective } from './better-highlight.directive';
 // import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 // import { SuccessAlertComponent } from './success-alert/success-alert.component';
 
@@ -28,7 +29,8 @@ import { EvenComponent } from './property-event-binding/even/even.component';
     PropertyEventBindingComponent,
     GamecontrolComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
