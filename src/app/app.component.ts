@@ -7,6 +7,9 @@ import { Content } from '@angular/compiler/src/render3/r3_ast';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+    notShow = true;
+
     serverElements = [
         {
             name: 'LAMP Server Blueprint',

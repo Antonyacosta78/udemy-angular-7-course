@@ -14,6 +14,7 @@ import { GamecontrolComponent } from './property-event-binding/gamecontrol/gamec
 import { OddComponent } from './property-event-binding/odd/odd.component';
 import { EvenComponent } from './property-event-binding/even/even.component';
 import { BetterHighlightDirective } from './better-highlight.directive';
+import { UnlessDirective } from './unless.directive';
 // import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 // import { SuccessAlertComponent } from './success-alert/success-alert.component';
 
@@ -30,7 +31,8 @@ import { BetterHighlightDirective } from './better-highlight.directive';
     GamecontrolComponent,
     OddComponent,
     EvenComponent,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
