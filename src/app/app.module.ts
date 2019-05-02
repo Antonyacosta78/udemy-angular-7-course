@@ -8,19 +8,29 @@ import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
 import { AccountsService } from './services/accounts.service';
 import { LoggingService } from './services/logging.service';
+import { ExcercisesComponent } from './excercises/excercises.component';
+import { ServicesExcerciseComponent } from './excercises/services-excercise/services-excercise.component';
+import { ActiveUsersComponent } from './excercises/services-excercise/active-users/active-users.component';
+import { InactiveUsersComponent } from './excercises/services-excercise/inactive-users/inactive-users.component';
+import { UsersService } from './excercises/services-excercise/users.service';
+import { CounterService } from './excercises/services-excercise/counter.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    ExcercisesComponent,
+    ServicesExcerciseComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [AccountsService, LoggingService],
+  providers: [AccountsService, LoggingService, UsersService, CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
